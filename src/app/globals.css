@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+
+  --forest: #1F4A3A;
+  --deep-green: #12302A;
+  --navy: #14234B;
+  --cream: #F5EEDC;
+  --cream-soft: #FAF6ED;
+  --gold: #C9A24B;
+  --gold-text-on-cream: #8A6A1F;
+  --wood: #8A5A3B;
+  --ink: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: #0c1814;
+  color: #E6EAE8;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #C9A24B;
+  color: #12302A;
+}
+
+/* Hairline gold divider with center diamond */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 162, 75, 0.45),
+    rgba(201, 162, 75, 0.15)
+  );
+}
+
+.gold-divider::after {
+  background: linear-gradient(
+    270deg,
+    transparent,
+    rgba(201, 162, 75, 0.45),
+    rgba(201, 162, 75, 0.15)
+  );
+}
+
+.gold-divider-diamond {
+  width: 7px;
+  height: 7px;
+  background-color: #C9A24B;
+  transform: rotate(45deg);
+  margin: 0 1rem;
+  box-shadow: 0 0 8px rgba(201, 162, 75, 0.6);
+}
+
+/* Glassmorphism card styles */
+.glass-card-dark {
+  background: rgba(18, 48, 42, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 162, 75, 0.22);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-dark:hover {
+  border-color: rgba(201, 162, 75, 0.5);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(201, 162, 75, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Gold shimmer button effect */
+.btn-gold {
+  background: linear-gradient(135deg, #DFC27A 0%, #C9A24B 50%, #9E7B2B 100%);
+  color: #12302A;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 18px rgba(201, 162, 75, 0.25);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: transform 0.75s ease-in-out;
+}
+
+.btn-gold:hover::after {
+  transform: translateX(450%) rotate(25deg);
+}
+
+.btn-gold:hover {
+  box-shadow: 0 6px 24px rgba(201, 162, 75, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

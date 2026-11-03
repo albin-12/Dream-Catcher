@@ -1,0 +1,22 @@
+[
+  { "id": "A1", "number": 1, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A2", "number": 2, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A3", "number": 3, "status": "available", "category": "Standard Desk" },
+  { "id": "A4", "number": 4, "status": "available", "category": "Standard Desk" },
+  { "id": "A5", "number": 5, "status": "available", "category": "Standard Desk" },
+  { "id": "A6", "number": 6, "status": "occupied", "category": "Corner Focus" },
+  { "id": "A7", "number": 7, "status": "available", "category": "Standard Desk" },
+  { "id": "A8", "number": 8, "status": "available", "category": "Standard Desk" },
+  { "id": "A9", "number": 9, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A10", "number": 10, "status": "available", "category": "Standard Desk" },
+  { "id": "A11", "number": 11, "status": "available", "category": "Corner Focus" },
+  { "id": "A12", "number": 12, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A13", "number": 13, "status": "available", "category": "Standard Desk" },
+  { "id": "A14", "number": 14, "status": "available", "category": "Standard Desk" },
+  { "id": "A15", "number": 15, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A16", "number": 16, "status": "available", "category": "Window View" },
+  { "id": "A17", "number": 17, "status": "available", "category": "Standard Desk" },
+  { "id": "A18", "number": 18, "status": "occupied", "category": "Standard Desk" },
+  { "id": "A19", "number": 19, "status": "available", "category": "Window View" },
+  { "id": "A20", "number": 20, "status": "available", "category": "Corner Focus" }
+]
